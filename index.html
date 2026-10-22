@@ -7,283 +7,150 @@
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&family=Syne:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Instrument+Serif:ital@0;1&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <div class="grain"></div>
 
-    <div class="cursor" id="cursor">
-        <span class="cursor-text" id="cursor-text"></span>
-    </div>
-    <div class="cursor-glow" id="cursor-glow"></div>
-
     <!-- Preloader -->
     <div class="preloader" id="preloader">
         <div class="preloader-inner">
-            <div class="preloader-text">
-                <span class="preloader-char">N</span>
-                <span class="preloader-char">E</span>
-                <span class="preloader-char">U</span>
-                <span class="preloader-char">R</span>
-                <span class="preloader-char">A</span>
-            </div>
-            <div class="preloader-bar"><div class="preloader-progress"></div></div>
-            <div class="preloader-sub">Loading Experience</div>
+            <div class="preloader-word">NEURA</div>
+            <div class="preloader-bar"><div class="preloader-fill"></div></div>
         </div>
     </div>
 
     <!-- Nav -->
     <nav class="nav" id="nav">
         <div class="nav-inner">
-            <a href="#" class="nav-logo">
-                <div class="nav-logo-mark"><div class="nav-logo-ring"></div><div class="nav-logo-dot"></div></div>
-                NEURA
-            </a>
-            <div class="nav-links" id="nav-links">
+            <a href="#" class="nav-logo">NEURA <span class="nav-logo-r">&reg;</span></a>
+            <div class="nav-links">
                 <a href="#services" class="nav-link" data-i18n="nav.services">Services</a>
                 <a href="#about" class="nav-link" data-i18n="nav.about">About</a>
                 <a href="#works" class="nav-link" data-i18n="nav.portfolio">Portfolio</a>
-                <button class="lang-switch" id="lang-switch" title="Switch language">
-                    <span class="lang-switch-active">EN</span>
-                    <span class="lang-switch-sep">/</span>
-                    <span class="lang-switch-inactive">RU</span>
-                </button>
-                <button class="theme-toggle" id="theme-toggle" title="Toggle theme">
-                    <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                </button>
-                <a href="#contact" class="nav-link nav-link--cta">
-                    <span class="nav-link-cta-dot"></span>
-                    <span data-i18n="nav.order">Order Now</span>
-                </a>
+                <div class="nav-controls">
+                    <button class="nav-btn-sm lang-switch" id="lang-switch">
+                        <span class="lang-switch-active">EN</span><span class="lang-switch-sep">/</span><span class="lang-switch-inactive">RU</span>
+                    </button>
+                    <button class="nav-btn-sm theme-toggle" id="theme-toggle">
+                        <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                        <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                    </button>
+                </div>
+                <a href="#contact" class="nav-link nav-link--cta" data-i18n="nav.order">Order</a>
             </div>
             <div class="nav-right-mobile">
-                <button class="theme-toggle theme-toggle--mobile" id="theme-toggle-mobile" title="Toggle theme">
-                    <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                <button class="nav-btn-sm theme-toggle" id="theme-toggle-mobile">
+                    <svg class="icon-moon" width="15" height="15" viewBox="0 0 24 24" fill="none"><path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                    <svg class="icon-sun" width="15" height="15" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="5" stroke="currentColor" stroke-width="2"/><path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                 </button>
-                <button class="lang-switch lang-switch--mobile" id="lang-switch-mobile" title="Switch language">
-                    <span class="lang-switch-active">EN</span>
-                    <span class="lang-switch-sep">/</span>
-                    <span class="lang-switch-inactive">RU</span>
+                <button class="nav-btn-sm lang-switch" id="lang-switch-mobile">
+                    <span class="lang-switch-active">EN</span><span class="lang-switch-sep">/</span><span class="lang-switch-inactive">RU</span>
                 </button>
-                <button class="nav-burger" id="nav-burger" aria-label="Menu">
-                    <span></span>
-                    <span></span>
-                </button>
+                <button class="burger" id="burger"><span></span><span></span></button>
             </div>
         </div>
     </nav>
 
     <!-- Mobile Menu -->
-    <div class="mobile-menu" id="mobile-menu">
-        <div class="mobile-menu-bg"></div>
-        <div class="mobile-menu-inner">
-            <a href="#services" class="mobile-menu-link">
-                <span class="mobile-menu-link-index">01</span>
-                <span class="mobile-menu-link-text" data-i18n="nav.services">Services</span>
-            </a>
-            <a href="#about" class="mobile-menu-link">
-                <span class="mobile-menu-link-index">02</span>
-                <span class="mobile-menu-link-text" data-i18n="nav.about">About</span>
-            </a>
-            <a href="#works" class="mobile-menu-link">
-                <span class="mobile-menu-link-index">03</span>
-                <span class="mobile-menu-link-text" data-i18n="nav.portfolio">Portfolio</span>
-            </a>
-            <a href="#contact" class="mobile-menu-link">
-                <span class="mobile-menu-link-index">04</span>
-                <span class="mobile-menu-link-text" data-i18n="nav.order">Order</span>
-            </a>
-        </div>
-        <div class="mobile-menu-footer">
-            <a href="#">Twitter</a>
-            <a href="#">Instagram</a>
-            <a href="#">Behance</a>
-        </div>
+    <div class="mob-menu" id="mob-menu">
+        <a href="#services" class="mob-link" data-i18n="nav.services">Services</a>
+        <a href="#about" class="mob-link" data-i18n="nav.about">About</a>
+        <a href="#works" class="mob-link" data-i18n="nav.portfolio">Portfolio</a>
+        <a href="#contact" class="mob-link" data-i18n="nav.order">Order</a>
     </div>
 
     <!-- Hero -->
-    <section class="hero" id="hero">
-        <div class="hero-bg">
-            <div class="hero-aurora"></div>
-            <div class="hero-mesh"></div>
-            <div class="hero-orb hero-orb--1"></div>
-            <div class="hero-orb hero-orb--2"></div>
-            <div class="hero-orb hero-orb--3"></div>
-            <div class="hero-particles" id="hero-particles"></div>
-        </div>
-        <div class="hero-content">
-            <div class="hero-eyebrow">
-                <div class="hero-eyebrow-line"></div>
-                <span data-i18n="hero.eyebrow">AI Creative Studio</span>
-                <div class="hero-eyebrow-line"></div>
+    <section class="hero">
+        <div class="hero-layout container">
+            <div class="hero-left">
+                <h1 class="hero-title">
+                    <span class="hero-t1" data-i18n="hero.line1">We Create</span>
+                    <span class="hero-t2"><span class="hero-t2-text" data-i18n="hero.line2">Impossible</span></span>
+                    <span class="hero-t3" data-i18n="hero.line3">Content</span>
+                    <span class="hero-t-r">&reg;</span>
+                </h1>
+                <p class="hero-desc" data-i18n="hero.desc">Send us your brief — get back stunning AI-generated content. Video, images, text, music, 3D and more. We handle the AI. You get the result.</p>
+                <a href="#contact" class="btn-main" data-i18n="hero.cta">Order Now</a>
             </div>
-            <h1 class="hero-title" id="hero-title">
-                <span class="hero-title-line">
-                    <span class="split-text" data-animate="chars" data-i18n="hero.line1">We Create</span>
-                </span>
-                <span class="hero-title-line">
-                    <span class="split-text hero-title--gradient" data-animate="chars" data-i18n="hero.line2">Impossible</span>
-                </span>
-                <span class="hero-title-line">
-                    <span class="split-text" data-animate="chars" data-i18n="hero.line3">Content</span>
-                    <span class="hero-title-badge">
-                        <span class="hero-title-badge-pulse"></span>
-                        AI
-                    </span>
-                </span>
-            </h1>
-            <div class="hero-bottom">
-                <p class="hero-desc" data-i18n-html="hero.desc">
-                    <span class="reveal-line">Send us your brief — get back stunning AI-generated</span>
-                    <span class="reveal-line">content. Video, images, text, music, 3D and more.</span>
-                    <span class="reveal-line">We handle the AI. You get the result.</span>
-                </p>
-                <div class="hero-cta">
-                    <a href="#contact" class="btn-magnetic" data-magnetic>
-                        <span class="btn-magnetic-bg"></span>
-                        <span class="btn-magnetic-text">
-                            <span data-i18n="hero.cta">Place an Order</span>
-                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                        </span>
-                    </a>
-                    <a href="#works" class="hero-cta-secondary">
-                        <span class="hero-cta-play">
-                            <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M3 1.5L12 7L3 12.5V1.5Z" fill="currentColor"/></svg>
-                        </span>
-                        <span data-i18n="hero.cta2">See Our Work</span>
-                    </a>
+            <div class="hero-right">
+                <div class="hero-card hero-card--1">
+                    <div class="hero-blob" style="--h1:80;--h2:120"></div>
+                    <span class="hero-card-label">Video AI</span>
+                </div>
+                <div class="hero-card hero-card--2">
+                    <div class="hero-blob" style="--h1:270;--h2:320"></div>
+                    <span class="hero-card-label">Image Gen</span>
+                </div>
+                <div class="hero-card hero-card--3">
+                    <div class="hero-blob" style="--h1:340;--h2:20"></div>
+                    <span class="hero-card-label">3D Render</span>
+                </div>
+                <div class="hero-card hero-card--4">
+                    <div class="hero-blob" style="--h1:190;--h2:240"></div>
+                    <span class="hero-card-label">Audio</span>
                 </div>
             </div>
-        </div>
-        <div class="hero-visual">
-            <div class="hero-visual-card hero-visual-card--1">
-                <div class="hero-visual-blob" style="--h:280;--s:80%;--l:60%"></div>
-                <span>Image Gen</span>
-            </div>
-            <div class="hero-visual-card hero-visual-card--2">
-                <div class="hero-visual-blob" style="--h:340;--s:90%;--l:65%"></div>
-                <span>Video AI</span>
-            </div>
-            <div class="hero-visual-card hero-visual-card--3">
-                <div class="hero-visual-blob" style="--h:200;--s:85%;--l:55%"></div>
-                <span>3D Render</span>
-            </div>
-        </div>
-        <div class="hero-scroll-indicator">
-            <div class="hero-scroll-mouse"><div class="hero-scroll-wheel"></div></div>
         </div>
     </section>
 
-    <!-- Marquee -->
-    <section class="marquee-section">
-        <div class="marquee-wrap">
-            <div class="marquee-track" data-speed="1">
-                <div class="marquee-content">
-                    <span class="marquee-item marquee-item--stroke" data-i18n="marquee.images">Image Generation</span>
-                    <span class="marquee-star">&#10038;</span>
-                    <span class="marquee-item" data-i18n="marquee.video">Video Production</span>
-                    <span class="marquee-star">&#10038;</span>
-                    <span class="marquee-item marquee-item--stroke" data-i18n="marquee.copy">Copywriting</span>
-                    <span class="marquee-star">&#10038;</span>
-                    <span class="marquee-item" data-i18n="marquee.audio">Voice & Music</span>
-                    <span class="marquee-star">&#10038;</span>
-                    <span class="marquee-item marquee-item--stroke" data-i18n="marquee.3d">3D & Animation</span>
-                    <span class="marquee-star">&#10038;</span>
-                    <span class="marquee-item" data-i18n="marquee.code">Code & Web</span>
-                    <span class="marquee-star">&#10038;</span>
-                    <span class="marquee-item marquee-item--stroke" data-i18n="marquee.brand">Brand Design</span>
-                    <span class="marquee-star">&#10038;</span>
-                </div>
-                <div class="marquee-content" aria-hidden="true">
-                    <span class="marquee-item marquee-item--stroke" data-i18n="marquee.images">Image Generation</span>
-                    <span class="marquee-star">&#10038;</span>
-                    <span class="marquee-item" data-i18n="marquee.video">Video Production</span>
-                    <span class="marquee-star">&#10038;</span>
-                    <span class="marquee-item marquee-item--stroke" data-i18n="marquee.copy">Copywriting</span>
-                    <span class="marquee-star">&#10038;</span>
-                    <span class="marquee-item" data-i18n="marquee.audio">Voice & Music</span>
-                    <span class="marquee-star">&#10038;</span>
-                    <span class="marquee-item marquee-item--stroke" data-i18n="marquee.3d">3D & Animation</span>
-                    <span class="marquee-star">&#10038;</span>
-                    <span class="marquee-item" data-i18n="marquee.code">Code & Web</span>
-                    <span class="marquee-star">&#10038;</span>
-                    <span class="marquee-item marquee-item--stroke" data-i18n="marquee.brand">Brand Design</span>
-                    <span class="marquee-star">&#10038;</span>
-                </div>
+    <!-- Ticker -->
+    <div class="ticker">
+        <div class="ticker-track">
+            <div class="ticker-content">
+                <span data-i18n="marquee.images">Image Generation</span><span class="ticker-dot"></span>
+                <span data-i18n="marquee.video">Video Production</span><span class="ticker-dot"></span>
+                <span data-i18n="marquee.copy">Copywriting</span><span class="ticker-dot"></span>
+                <span data-i18n="marquee.audio">Voice & Music</span><span class="ticker-dot"></span>
+                <span data-i18n="marquee.3d">3D & Animation</span><span class="ticker-dot"></span>
+                <span data-i18n="marquee.code">Code & Web</span><span class="ticker-dot"></span>
+                <span data-i18n="marquee.brand">Brand Design</span><span class="ticker-dot"></span>
+            </div>
+            <div class="ticker-content" aria-hidden="true">
+                <span data-i18n="marquee.images">Image Generation</span><span class="ticker-dot"></span>
+                <span data-i18n="marquee.video">Video Production</span><span class="ticker-dot"></span>
+                <span data-i18n="marquee.copy">Copywriting</span><span class="ticker-dot"></span>
+                <span data-i18n="marquee.audio">Voice & Music</span><span class="ticker-dot"></span>
+                <span data-i18n="marquee.3d">3D & Animation</span><span class="ticker-dot"></span>
+                <span data-i18n="marquee.code">Code & Web</span><span class="ticker-dot"></span>
+                <span data-i18n="marquee.brand">Brand Design</span><span class="ticker-dot"></span>
             </div>
         </div>
-    </section>
+    </div>
 
     <!-- About -->
     <section class="about" id="about">
         <div class="container">
-            <div class="about-top">
-                <div class="about-label"><span class="label-tag" data-i18n="about.label">[ About Us ]</span></div>
-                <h2 class="about-heading split-text" data-animate="words" data-i18n="about.heading">We don't sell tools. We deliver results. Your idea comes in — polished AI content goes out.</h2>
+            <div class="section-head">
+                <span class="tag" data-i18n="about.label">[ About Us ]</span>
             </div>
-            <div class="about-grid">
-                <div class="about-col">
-                    <p class="about-text reveal-up" data-i18n="about.text1">NEURA is a creative studio where AI meets human expertise. You send us a brief — we return production-ready content crafted with the most advanced AI models on the planet. No subscriptions, no learning curves, no prompt engineering on your end.</p>
-                    <p class="about-text reveal-up" data-i18n="about.text2">Our team of AI artists, engineers, and creative directors hand-curate every output. We treat AI as a creative partner, not a shortcut — and the results speak for themselves.</p>
+            <div class="about-hero-text reveal" data-i18n-html="about.heading">
+                NEURA&nbsp;&reg; &mdash; a creative studio working at the intersection of <em>AI</em> and <em>human expertise.</em> We generate content that moves businesses forward.
+            </div>
+            <div class="about-cols">
+                <div class="about-col reveal">
+                    <p data-i18n="about.text1">You send us a brief — we return production-ready content crafted with the most advanced AI models. No subscriptions, no learning curves, no prompt engineering on your end.</p>
                 </div>
-                <div class="about-col">
-                    <div class="about-features">
-                        <div class="about-feature reveal-up">
-                            <div class="about-feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-                            </div>
-                            <div>
-                                <h4 data-i18n="about.f1title">Fully Custom</h4>
-                                <p data-i18n="about.f1text">Every piece of content is generated specifically for your brand and vision</p>
-                            </div>
-                        </div>
-                        <div class="about-feature reveal-up">
-                            <div class="about-feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M13 2L3 14H12L11 22L21 10H12L13 2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-                            </div>
-                            <div>
-                                <h4 data-i18n="about.f2title">Lightning Fast</h4>
-                                <p data-i18n="about.f2text">Most orders delivered within 24-48 hours with unlimited revisions</p>
-                            </div>
-                        </div>
-                        <div class="about-feature reveal-up">
-                            <div class="about-feature-icon">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M12 22C17.5228 22 22 17.5228 22 12C22 6.47715 17.5228 2 12 2C6.47715 2 2 6.47715 2 12C2 17.5228 6.47715 22 12 22Z" stroke="currentColor" stroke-width="2"/><path d="M8 12L11 15L16 9" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                            </div>
-                            <div>
-                                <h4 data-i18n="about.f3title">Commercial Rights</h4>
-                                <p data-i18n="about.f3text">Full commercial license included — use the content anywhere, forever</p>
-                            </div>
-                        </div>
-                    </div>
+                <div class="about-col reveal" style="--d:.1s">
+                    <p data-i18n="about.text2">Our team of AI artists, engineers, and creative directors hand-curate every output. We treat AI as a creative partner, not a shortcut.</p>
                 </div>
             </div>
-        </div>
-        <div class="counters-band">
-            <div class="container">
-                <div class="counters-grid">
-                    <div class="counter-item">
-                        <div class="counter-number" data-count="500">0</div>
-                        <div class="counter-suffix">+</div>
-                        <div class="counter-label" data-i18n="stats.projects">Projects Completed</div>
-                    </div>
-                    <div class="counter-item">
-                        <div class="counter-number" data-count="12">0</div>
-                        <div class="counter-suffix">K+</div>
-                        <div class="counter-label" data-i18n="stats.content">Content Pieces Delivered</div>
-                    </div>
-                    <div class="counter-item">
-                        <div class="counter-number" data-count="98">0</div>
-                        <div class="counter-suffix">%</div>
-                        <div class="counter-label" data-i18n="stats.satisfaction">Client Satisfaction</div>
-                    </div>
-                    <div class="counter-item">
-                        <div class="counter-number" data-count="48">0</div>
-                        <div class="counter-suffix" data-i18n="stats.hours">h</div>
-                        <div class="counter-label" data-i18n="stats.delivery">Average Delivery Time</div>
-                    </div>
+            <div class="stats">
+                <div class="stat reveal">
+                    <span class="stat-num" data-count="500">0</span><span class="stat-suf">+</span>
+                    <span class="stat-label" data-i18n="stats.projects">Projects Completed</span>
+                </div>
+                <div class="stat reveal" style="--d:.1s">
+                    <span class="stat-num" data-count="12">0</span><span class="stat-suf">K+</span>
+                    <span class="stat-label" data-i18n="stats.content">Content Pieces</span>
+                </div>
+                <div class="stat reveal" style="--d:.15s">
+                    <span class="stat-num" data-count="98">0</span><span class="stat-suf">%</span>
+                    <span class="stat-label" data-i18n="stats.satisfaction">Satisfaction</span>
+                </div>
+                <div class="stat reveal" style="--d:.2s">
+                    <span class="stat-num" data-count="48">0</span><span class="stat-suf" data-i18n="stats.hours">h</span>
+                    <span class="stat-label" data-i18n="stats.delivery">Avg. Delivery</span>
                 </div>
             </div>
         </div>
@@ -292,98 +159,73 @@
     <!-- Services -->
     <section class="services" id="services">
         <div class="container">
-            <div class="services-top">
-                <span class="label-tag reveal-up" data-i18n="services.label">[ What We Create For You ]</span>
-                <h2 class="services-heading reveal-up" data-i18n-html="services.heading">You describe it.<br><em>We generate it.</em></h2>
+            <div class="section-head">
+                <span class="tag" data-i18n="services.label">[ Services ]</span>
+                <h2 class="section-title reveal" data-i18n-html="services.heading">What we<br><em>create for you</em></h2>
             </div>
-        </div>
-        <div class="services-list">
-            <div class="service-row" data-color="#7c3aed">
-                <div class="container"><div class="service-row-inner">
-                    <span class="service-row-index">01</span>
-                    <h3 class="service-row-title" data-i18n="srv.1.title">Images & Visual Art</h3>
-                    <p class="service-row-desc" data-i18n="srv.1.desc">Photorealistic renders, concept art, product shots, illustrations, social media visuals</p>
-                    <span class="service-row-arrow"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 24L24 8M24 8H12M24 8V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                </div></div>
-                <div class="service-row-bg"></div>
-            </div>
-            <div class="service-row" data-color="#ec4899">
-                <div class="container"><div class="service-row-inner">
-                    <span class="service-row-index">02</span>
-                    <h3 class="service-row-title" data-i18n="srv.2.title">Video & Motion</h3>
-                    <p class="service-row-desc" data-i18n="srv.2.desc">Commercials, explainers, reels, cinematic clips, product videos, animated logos</p>
-                    <span class="service-row-arrow"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 24L24 8M24 8H12M24 8V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                </div></div>
-                <div class="service-row-bg"></div>
-            </div>
-            <div class="service-row" data-color="#06b6d4">
-                <div class="container"><div class="service-row-inner">
-                    <span class="service-row-index">03</span>
-                    <h3 class="service-row-title" data-i18n="srv.3.title">Text & Copywriting</h3>
-                    <p class="service-row-desc" data-i18n="srv.3.desc">Articles, ad copy, product descriptions, scripts, newsletters, SEO content in 50+ languages</p>
-                    <span class="service-row-arrow"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 24L24 8M24 8H12M24 8V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                </div></div>
-                <div class="service-row-bg"></div>
-            </div>
-            <div class="service-row" data-color="#f59e0b">
-                <div class="container"><div class="service-row-inner">
-                    <span class="service-row-index">04</span>
-                    <h3 class="service-row-title" data-i18n="srv.4.title">Audio & Music</h3>
-                    <p class="service-row-desc" data-i18n="srv.4.desc">Voice overs, jingles, podcast intros, full tracks, sound design, voice cloning</p>
-                    <span class="service-row-arrow"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 24L24 8M24 8H12M24 8V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                </div></div>
-                <div class="service-row-bg"></div>
-            </div>
-            <div class="service-row" data-color="#10b981">
-                <div class="container"><div class="service-row-inner">
-                    <span class="service-row-index">05</span>
-                    <h3 class="service-row-title" data-i18n="srv.5.title">3D & Animation</h3>
-                    <p class="service-row-desc" data-i18n="srv.5.desc">Product visualization, character design, architectural renders, AR/VR assets</p>
-                    <span class="service-row-arrow"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 24L24 8M24 8H12M24 8V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                </div></div>
-                <div class="service-row-bg"></div>
-            </div>
-            <div class="service-row" data-color="#8b5cf6">
-                <div class="container"><div class="service-row-inner">
-                    <span class="service-row-index">06</span>
-                    <h3 class="service-row-title" data-i18n="srv.6.title">Code & Websites</h3>
-                    <p class="service-row-desc" data-i18n="srv.6.desc">Landing pages, web apps, bots, automation scripts, app prototypes, AI integrations</p>
-                    <span class="service-row-arrow"><svg width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M8 24L24 8M24 8H12M24 8V20" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                </div></div>
-                <div class="service-row-bg"></div>
+            <div class="srv-list">
+                <a href="#contact" class="srv reveal">
+                    <span class="srv-idx">01</span>
+                    <span class="srv-name" data-i18n="srv.1.title">Images & Visual Art</span>
+                    <span class="srv-desc" data-i18n="srv.1.desc">Photorealistic renders, concept art, product shots, illustrations</span>
+                    <span class="srv-arrow">&nearr;</span>
+                </a>
+                <a href="#contact" class="srv reveal" style="--d:.05s">
+                    <span class="srv-idx">02</span>
+                    <span class="srv-name" data-i18n="srv.2.title">Video & Motion</span>
+                    <span class="srv-desc" data-i18n="srv.2.desc">Commercials, explainers, reels, cinematic clips, product videos</span>
+                    <span class="srv-arrow">&nearr;</span>
+                </a>
+                <a href="#contact" class="srv reveal" style="--d:.1s">
+                    <span class="srv-idx">03</span>
+                    <span class="srv-name" data-i18n="srv.3.title">Text & Copywriting</span>
+                    <span class="srv-desc" data-i18n="srv.3.desc">Articles, ad copy, product descriptions, scripts, SEO content</span>
+                    <span class="srv-arrow">&nearr;</span>
+                </a>
+                <a href="#contact" class="srv reveal" style="--d:.15s">
+                    <span class="srv-idx">04</span>
+                    <span class="srv-name" data-i18n="srv.4.title">Audio & Music</span>
+                    <span class="srv-desc" data-i18n="srv.4.desc">Voice overs, jingles, full tracks, sound design, voice cloning</span>
+                    <span class="srv-arrow">&nearr;</span>
+                </a>
+                <a href="#contact" class="srv reveal" style="--d:.2s">
+                    <span class="srv-idx">05</span>
+                    <span class="srv-name" data-i18n="srv.5.title">3D & Animation</span>
+                    <span class="srv-desc" data-i18n="srv.5.desc">Product visualization, character design, architectural renders</span>
+                    <span class="srv-arrow">&nearr;</span>
+                </a>
+                <a href="#contact" class="srv reveal" style="--d:.25s">
+                    <span class="srv-idx">06</span>
+                    <span class="srv-name" data-i18n="srv.6.title">Code & Websites</span>
+                    <span class="srv-desc" data-i18n="srv.6.desc">Landing pages, web apps, bots, scripts, AI integrations</span>
+                    <span class="srv-arrow">&nearr;</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- Process -->
-    <section class="process">
+    <!-- How it works -->
+    <section class="how">
         <div class="container">
-            <div class="process-header">
-                <span class="label-tag reveal-up" data-i18n="process.label">[ How It Works ]</span>
-                <h2 class="process-heading reveal-up" data-i18n-html="process.heading">Three steps to<br><em>perfect content</em></h2>
+            <div class="section-head">
+                <span class="tag" data-i18n="process.label">[ How It Works ]</span>
+                <h2 class="section-title reveal" data-i18n-html="process.heading">Three steps to<br><em>perfect content</em></h2>
             </div>
-            <div class="process-timeline">
-                <div class="process-line"><div class="process-line-fill" id="process-line-fill"></div></div>
-                <div class="process-step reveal-up" data-step="1">
-                    <div class="process-step-dot"><span>01</span></div>
-                    <div class="process-step-content">
-                        <h3 data-i18n="process.s1title">Send Your Brief</h3>
-                        <p data-i18n="process.s1text">Tell us what you need — describe the content, share references, mood boards, or just a rough idea. We'll figure out the rest.</p>
-                    </div>
+            <div class="steps">
+                <div class="step reveal">
+                    <span class="step-num">01</span>
+                    <h3 data-i18n="process.s1title">Send Your Brief</h3>
+                    <p data-i18n="process.s1text">Describe what you need — share references, mood boards, or just a rough idea. We'll figure out the rest.</p>
                 </div>
-                <div class="process-step reveal-up" data-step="2" style="--delay:0.15s">
-                    <div class="process-step-dot"><span>02</span></div>
-                    <div class="process-step-content">
-                        <h3 data-i18n="process.s2title">We Generate & Refine</h3>
-                        <p data-i18n="process.s2text">Our team runs your brief through custom AI pipelines, curates the best outputs, and polishes everything to production quality.</p>
-                    </div>
+                <div class="step reveal" style="--d:.1s">
+                    <span class="step-num">02</span>
+                    <h3 data-i18n="process.s2title">We Generate & Refine</h3>
+                    <p data-i18n="process.s2text">Our team runs your brief through custom AI pipelines and polishes everything to production quality.</p>
                 </div>
-                <div class="process-step reveal-up" data-step="3" style="--delay:0.3s">
-                    <div class="process-step-dot"><span>03</span></div>
-                    <div class="process-step-content">
-                        <h3 data-i18n="process.s3title">Receive & Use</h3>
-                        <p data-i18n="process.s3text">Get your finished content in any format you need. Full commercial rights included. Need changes? Unlimited revisions are on us.</p>
-                    </div>
+                <div class="step reveal" style="--d:.2s">
+                    <span class="step-num">03</span>
+                    <h3 data-i18n="process.s3title">Receive & Use</h3>
+                    <p data-i18n="process.s3text">Get finished content in any format. Commercial rights included. Unlimited revisions on us.</p>
                 </div>
             </div>
         </div>
@@ -392,164 +234,77 @@
     <!-- Works -->
     <section class="works" id="works">
         <div class="container">
-            <div class="works-header">
-                <span class="label-tag reveal-up" data-i18n="works.label">[ Our Work ]</span>
-                <h2 class="works-heading reveal-up" data-i18n-html="works.heading">Selected<br><em>projects</em></h2>
-                <p class="works-sub reveal-up" data-i18n="works.sub">Every piece here was crafted by our team using AI, from brief to final delivery.</p>
+            <div class="section-head">
+                <span class="tag" data-i18n="works.label">[ Portfolio ]</span>
             </div>
+            <h2 class="works-title reveal">
+                <span data-i18n="works.t1">Latest</span><br>
+                <em data-i18n="works.t2">projects</em>
+            </h2>
         </div>
-        <div class="works-scroll" id="works-scroll">
-            <div class="works-scroll-track">
-                <div class="work-card" data-cursor-text="View">
-                    <div class="work-card-visual">
-                        <div class="work-card-blob" style="--h1:270;--h2:320"></div>
-                        <div class="work-card-blob work-card-blob--2" style="--h1:200;--h2:260"></div>
-                    </div>
-                    <div class="work-card-info">
-                        <span class="work-card-cat" data-i18n="marquee.images">Image Generation</span>
-                        <h3 data-i18n="work.1.title">Neural Fashion Campaign</h3>
-                        <p data-i18n="work.1.desc">Full lookbook with 200+ AI-generated fashion shots for a luxury brand launch</p>
-                    </div>
-                </div>
-                <div class="work-card" data-cursor-text="View">
-                    <div class="work-card-visual">
-                        <div class="work-card-blob" style="--h1:340;--h2:20"></div>
-                        <div class="work-card-blob work-card-blob--2" style="--h1:300;--h2:340"></div>
-                    </div>
-                    <div class="work-card-info">
-                        <span class="work-card-cat" data-i18n="marquee.video">Video Production</span>
-                        <h3 data-i18n="work.2.title">Crypto Exchange Promo</h3>
-                        <p data-i18n="work.2.desc">60-second cinematic commercial generated entirely with AI video models</p>
-                    </div>
-                </div>
-                <div class="work-card" data-cursor-text="View">
-                    <div class="work-card-visual">
-                        <div class="work-card-blob" style="--h1:150;--h2:190"></div>
-                        <div class="work-card-blob work-card-blob--2" style="--h1:100;--h2:160"></div>
-                    </div>
-                    <div class="work-card-info">
-                        <span class="work-card-cat" data-i18n="marquee.3d">3D & Animation</span>
-                        <h3 data-i18n="work.3.title">AI Product Visualizer</h3>
-                        <p data-i18n="work.3.desc">Interactive 3D product renders for an electronics brand's entire catalog</p>
-                    </div>
-                </div>
-                <div class="work-card" data-cursor-text="View">
-                    <div class="work-card-visual">
-                        <div class="work-card-blob" style="--h1:30;--h2:60"></div>
-                        <div class="work-card-blob work-card-blob--2" style="--h1:350;--h2:30"></div>
-                    </div>
-                    <div class="work-card-info">
-                        <span class="work-card-cat" data-i18n="marquee.audio">Voice & Music</span>
-                        <h3 data-i18n="work.4.title">Synthwave Album</h3>
-                        <p data-i18n="work.4.desc">12-track original album composed and produced by AI for a streaming platform</p>
-                    </div>
-                </div>
-                <div class="work-card" data-cursor-text="View">
-                    <div class="work-card-visual">
-                        <div class="work-card-blob" style="--h1:210;--h2:250"></div>
-                        <div class="work-card-blob work-card-blob--2" style="--h1:180;--h2:220"></div>
-                    </div>
-                    <div class="work-card-info">
-                        <span class="work-card-cat" data-i18n="marquee.copy">Copywriting</span>
-                        <h3 data-i18n="work.5.title">E-commerce Content Engine</h3>
-                        <p data-i18n="work.5.desc">10,000+ unique product descriptions for a marketplace with SEO optimization</p>
-                    </div>
-                </div>
-                <div class="work-card" data-cursor-text="View">
-                    <div class="work-card-visual">
-                        <div class="work-card-blob" style="--h1:280;--h2:310"></div>
-                        <div class="work-card-blob work-card-blob--2" style="--h1:250;--h2:290"></div>
-                    </div>
-                    <div class="work-card-info">
-                        <span class="work-card-cat" data-i18n="marquee.brand">Brand Design</span>
-                        <h3 data-i18n="work.6.title">Virtual Brand Ambassador</h3>
-                        <p data-i18n="work.6.desc">AI-generated digital human with cloned voice for a fintech company</p>
-                    </div>
-                </div>
+        <div class="works-grid container">
+            <div class="wk reveal">
+                <div class="wk-img"><div class="wk-blob" style="--h1:270;--h2:320"></div><div class="wk-blob wk-blob--2" style="--h1:200;--h2:260"></div></div>
+                <div class="wk-info"><span class="wk-cat" data-i18n="marquee.images">Image Generation</span><h3 data-i18n="work.1.title">Neural Fashion Campaign</h3></div>
             </div>
-        </div>
-        <div class="works-drag-hint reveal-up">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"><path d="M5 12H19M19 12L14 7M19 12L14 17" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-            <span data-i18n="works.drag">Drag to explore</span>
-        </div>
-    </section>
-
-    <!-- Big Text -->
-    <section class="bigtext">
-        <div class="bigtext-track">
-            <div class="bigtext-content">
-                <span data-i18n="big.1">YOUR VISION</span>
-                <span class="bigtext-dot"></span>
-                <span class="bigtext-outline" data-i18n="big.2">OUR AI</span>
-                <span class="bigtext-dot"></span>
-                <span data-i18n="big.3">PERFECT RESULT</span>
-                <span class="bigtext-dot"></span>
+            <div class="wk wk--lg reveal" style="--d:.1s">
+                <div class="wk-img"><div class="wk-blob" style="--h1:340;--h2:20"></div><div class="wk-blob wk-blob--2" style="--h1:300;--h2:340"></div></div>
+                <div class="wk-info"><span class="wk-cat" data-i18n="marquee.video">Video Production</span><h3 data-i18n="work.2.title">Crypto Exchange Promo</h3></div>
             </div>
-            <div class="bigtext-content" aria-hidden="true">
-                <span data-i18n="big.1">YOUR VISION</span>
-                <span class="bigtext-dot"></span>
-                <span class="bigtext-outline" data-i18n="big.2">OUR AI</span>
-                <span class="bigtext-dot"></span>
-                <span data-i18n="big.3">PERFECT RESULT</span>
-                <span class="bigtext-dot"></span>
+            <div class="wk wk--lg reveal" style="--d:.15s">
+                <div class="wk-img"><div class="wk-blob" style="--h1:150;--h2:190"></div><div class="wk-blob wk-blob--2" style="--h1:100;--h2:160"></div></div>
+                <div class="wk-info"><span class="wk-cat" data-i18n="marquee.3d">3D & Animation</span><h3 data-i18n="work.3.title">AI Product Visualizer</h3></div>
+            </div>
+            <div class="wk reveal" style="--d:.2s">
+                <div class="wk-img"><div class="wk-blob" style="--h1:30;--h2:60"></div><div class="wk-blob wk-blob--2" style="--h1:350;--h2:30"></div></div>
+                <div class="wk-info"><span class="wk-cat" data-i18n="marquee.audio">Voice & Music</span><h3 data-i18n="work.4.title">Synthwave Album</h3></div>
+            </div>
+            <div class="wk reveal" style="--d:.1s">
+                <div class="wk-img"><div class="wk-blob" style="--h1:210;--h2:250"></div><div class="wk-blob wk-blob--2" style="--h1:180;--h2:220"></div></div>
+                <div class="wk-info"><span class="wk-cat" data-i18n="marquee.copy">Copywriting</span><h3 data-i18n="work.5.title">E-commerce Content Engine</h3></div>
+            </div>
+            <div class="wk reveal" style="--d:.15s">
+                <div class="wk-img"><div class="wk-blob" style="--h1:280;--h2:310"></div><div class="wk-blob wk-blob--2" style="--h1:250;--h2:290"></div></div>
+                <div class="wk-info"><span class="wk-cat" data-i18n="marquee.brand">Brand Design</span><h3 data-i18n="work.6.title">Virtual Brand Ambassador</h3></div>
             </div>
         </div>
     </section>
 
-    <!-- CTA / Order -->
+    <!-- CTA -->
     <section class="cta" id="contact">
-        <div class="cta-aurora"></div>
         <div class="container">
-            <div class="cta-inner">
-                <div class="cta-left">
-                    <span class="label-tag label-tag--light reveal-up" data-i18n="cta.label">[ Place an Order ]</span>
-                    <h2 class="cta-heading reveal-up" data-i18n-html="cta.heading">Tell us what<br>you need — we<br><em>create it</em>.</h2>
-                    <p class="cta-text reveal-up" data-i18n="cta.text">Fill out the form, describe what you want to generate, and we'll get back to you with a result. Video, images, music, text — anything AI can create.</p>
-                    <div class="cta-trust reveal-up">
-                        <div class="cta-avatars">
-                            <div class="cta-avatar" style="--bg:#7c3aed">N</div>
-                            <div class="cta-avatar" style="--bg:#ec4899">A</div>
-                            <div class="cta-avatar" style="--bg:#06b6d4">M</div>
-                            <div class="cta-avatar" style="--bg:#f59e0b">K</div>
-                        </div>
+            <div class="section-head">
+                <span class="tag tag--inv" data-i18n="cta.label">[ Order ]</span>
+            </div>
+            <div class="cta-grid">
+                <div class="cta-left reveal">
+                    <h2 class="cta-title" data-i18n-html="cta.heading">Tell us what you need —<br>we <em>create it</em>.</h2>
+                    <p class="cta-text" data-i18n="cta.text">Fill out the form, describe what you want to generate, and we'll get back to you with a result.</p>
+                    <div class="cta-trust">
+                        <div class="cta-avatars"><div class="av" style="--c:#d4ff2b">N</div><div class="av" style="--c:#ec4899">A</div><div class="av" style="--c:#06b6d4">M</div></div>
                         <span data-i18n="cta.trust">500+ orders completed</span>
                     </div>
                 </div>
-                <div class="cta-right">
-                    <form class="cta-form reveal-up" id="contact-form">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <label data-i18n="form.name">Name</label>
-                                <input type="text" data-i18n-placeholder="form.name_ph" placeholder="Your name" required>
-                            </div>
-                            <div class="form-group">
-                                <label data-i18n="form.contact">Email / Telegram</label>
-                                <input type="text" data-i18n-placeholder="form.contact_ph" placeholder="How to reach you" required>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label data-i18n="form.type">What to generate?</label>
-                            <select required id="service-select">
-                                <option value="" disabled selected data-i18n="form.type_ph">Select type</option>
-                                <option value="video" data-i18n="form.opt.video">Video</option>
-                                <option value="images" data-i18n="form.opt.images">Images / Art</option>
-                                <option value="text" data-i18n="form.opt.text">Text / Copy</option>
-                                <option value="audio" data-i18n="form.opt.audio">Music / Audio</option>
-                                <option value="3d" data-i18n="form.opt.3d">3D / Animation</option>
-                                <option value="code" data-i18n="form.opt.code">Code / Website</option>
-                                <option value="other" data-i18n="form.opt.other">Other</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <label data-i18n="form.brief">Describe your request</label>
-                            <textarea data-i18n-placeholder="form.brief_ph" placeholder="What should we create? Add any details, references, or links..." rows="4"></textarea>
-                        </div>
-                        <button type="submit" class="btn-submit">
-                            <span class="btn-submit-text" data-i18n="form.submit">Send Order</span>
-                            <span class="btn-submit-icon"><svg width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M5 15L15 5M15 5H8M15 5V12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
-                        </button>
-                    </form>
-                </div>
+                <form class="cta-form reveal" style="--d:.15s" id="contact-form">
+                    <div class="form-row">
+                        <div class="fg"><label data-i18n="form.name">Name</label><input type="text" data-i18n-placeholder="form.name_ph" placeholder="Your name" required></div>
+                        <div class="fg"><label data-i18n="form.contact">Email / Telegram</label><input type="text" data-i18n-placeholder="form.contact_ph" placeholder="How to reach you" required></div>
+                    </div>
+                    <div class="fg"><label data-i18n="form.type">What to generate?</label>
+                        <select required>
+                            <option value="" disabled selected data-i18n="form.type_ph">Select type</option>
+                            <option value="video" data-i18n="form.opt.video">Video</option>
+                            <option value="images" data-i18n="form.opt.images">Images / Art</option>
+                            <option value="text" data-i18n="form.opt.text">Text / Copy</option>
+                            <option value="audio" data-i18n="form.opt.audio">Music / Audio</option>
+                            <option value="3d" data-i18n="form.opt.3d">3D / Animation</option>
+                            <option value="code" data-i18n="form.opt.code">Code / Website</option>
+                            <option value="other" data-i18n="form.opt.other">Other</option>
+                        </select>
+                    </div>
+                    <div class="fg"><label data-i18n="form.brief">Describe your request</label><textarea data-i18n-placeholder="form.brief_ph" placeholder="What should we create?" rows="4"></textarea></div>
+                    <button type="submit" class="btn-main btn-main--full"><span data-i18n="form.submit">Send Order</span> &nearr;</button>
+                </form>
             </div>
         </div>
     </section>
@@ -557,43 +312,13 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-mega">
-                <h2 class="footer-title split-text" data-animate="chars">NEURA</h2>
+            <div class="footer-big">NEURA&reg;</div>
+            <div class="footer-cols">
+                <div class="footer-col"><h4 data-i18n="nav.services">Services</h4><a href="#" data-i18n="marquee.images">Image Generation</a><a href="#" data-i18n="srv.2.title">Video & Motion</a><a href="#" data-i18n="marquee.copy">Copywriting</a><a href="#" data-i18n="srv.4.title">Audio & Music</a></div>
+                <div class="footer-col"><h4 data-i18n="footer.company">Company</h4><a href="#" data-i18n="nav.about">About</a><a href="#" data-i18n="footer.blog">Blog</a><a href="#" data-i18n="footer.contact">Contact</a></div>
+                <div class="footer-col"><h4 data-i18n="footer.social">Social</h4><a href="#">Twitter / X</a><a href="#">Instagram</a><a href="#">Behance</a></div>
             </div>
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <span class="footer-col-title" data-i18n="nav.services">Services</span>
-                    <a href="#" data-i18n="marquee.images">Image Generation</a>
-                    <a href="#" data-i18n="srv.2.title">Video & Motion</a>
-                    <a href="#" data-i18n="marquee.copy">Copywriting</a>
-                    <a href="#" data-i18n="srv.4.title">Audio & Music</a>
-                    <a href="#" data-i18n="marquee.3d">3D & Animation</a>
-                    <a href="#" data-i18n="marquee.code">Code & Web</a>
-                </div>
-                <div class="footer-col">
-                    <span class="footer-col-title" data-i18n="footer.company">Company</span>
-                    <a href="#" data-i18n="nav.about">About</a>
-                    <a href="#" data-i18n="footer.careers">Careers</a>
-                    <a href="#" data-i18n="footer.blog">Blog</a>
-                    <a href="#" data-i18n="footer.contact">Contact</a>
-                </div>
-                <div class="footer-col">
-                    <span class="footer-col-title" data-i18n="footer.social">Social</span>
-                    <a href="#">Twitter / X</a>
-                    <a href="#">Instagram</a>
-                    <a href="#">Behance</a>
-                    <a href="#">LinkedIn</a>
-                </div>
-                <div class="footer-col">
-                    <span class="footer-col-title" data-i18n="footer.legal">Legal</span>
-                    <a href="#" data-i18n="footer.privacy">Privacy Policy</a>
-                    <a href="#" data-i18n="footer.terms">Terms of Service</a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <span>&copy; 2026 NEURA Studio. All rights reserved.</span>
-                <span>AI-Powered Creative Studio</span>
-            </div>
+            <div class="footer-bottom"><span>&copy; 2026 NEURA Studio</span><span data-i18n="footer.privacy">Privacy Policy</span></div>
         </div>
     </footer>
 
